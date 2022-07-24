@@ -32,6 +32,12 @@ public class WeatherApiService {
 		return response;
 	}
 	
+	public List<String> getTimeDataText(){
+		List<String> response = request.getForObject(url, WeatherResponse.class).getData().getText();
+		
+		return response;
+	}
+	
 	public String getCurrentObName() {
 		String url = "https://forecast.weather.gov/MapClick.php?lat=42.3831&lon=-83.1022&FcstType=json";
 		String response = request.getForObject(url, WeatherResponse.class).getCurrentobservation().getName();

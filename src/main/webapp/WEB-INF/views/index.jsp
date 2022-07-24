@@ -23,7 +23,11 @@ Observation Stats: <br>
   
 
 <br><br>
+
 Time: ${time}
+
+<br><br>
+Data -> text: ${data }
 
 <br><br>
 Search by Latitude and Longitude:

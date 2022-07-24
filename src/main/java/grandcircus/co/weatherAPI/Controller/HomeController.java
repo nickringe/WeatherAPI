@@ -19,6 +19,8 @@ public class HomeController {
 		
 		model.addAttribute("location", weatherService.getAreaDescription());
 		model.addAttribute("time", weatherService.getTimeStartPeriodName());
+		//add data->text
+		model.addAttribute("data", weatherService.getTimeDataText());
 		model.addAttribute("obsName", weatherService.getCurrentObName());
 		model.addAttribute("obsTemp", weatherService.getCurrentObTemp());
 		model.addAttribute("obsDewp", weatherService.getCurrentObDewp());
@@ -26,6 +28,7 @@ public class HomeController {
 		//to see if data is being passed to controller
 		System.out.println(weatherService.getAreaDescription());
 		System.out.println(weatherService.getTimeStartPeriodName());
+		System.out.println(weatherService.getTimeDataText());
 		System.out.println(weatherService.getCurrentObName());
 		System.out.println(weatherService.getCurrentObTemp());
 		System.out.println(weatherService.getCurrentObDewp());

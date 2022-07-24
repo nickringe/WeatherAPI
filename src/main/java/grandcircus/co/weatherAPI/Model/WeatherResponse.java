@@ -1,5 +1,6 @@
 package grandcircus.co.weatherAPI.Model;
 
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class WeatherResponse {
@@ -12,6 +13,9 @@ public class WeatherResponse {
 	
 	@JsonProperty("currentobservation")
 	private CurrentObservation currentobservation;
+	
+	@JsonProperty("data")
+	private Data data;
 
 	
 	
@@ -32,6 +36,12 @@ public class WeatherResponse {
 	}
 	public void setCurrentobservation(CurrentObservation currentobservation) {
 		this.currentobservation = currentobservation;
+	}
+	public Data getData() {
+		return data;
+	}
+	public void setData(Data data) {
+		this.data = data;
 	}
 
 	
