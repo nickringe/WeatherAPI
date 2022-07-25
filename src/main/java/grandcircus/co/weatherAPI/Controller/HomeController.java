@@ -19,7 +19,6 @@ public class HomeController {
 		
 		model.addAttribute("location", weatherService.getAreaDescription());
 		model.addAttribute("time", weatherService.getTimeStartPeriodName());
-		//add data->text
 		model.addAttribute("data", weatherService.getTimeDataText());
 		model.addAttribute("obsName", weatherService.getCurrentObName());
 		model.addAttribute("obsTemp", weatherService.getCurrentObTemp());

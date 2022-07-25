@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+#mytable {
+    line-height: 40px;
+    width: 100%;
+
+}
+
+.small {
+    font-size: small;
+    width: 10%;
+}
+
+.large {
+    width: 70%;
+    font-size: small;
+
+}

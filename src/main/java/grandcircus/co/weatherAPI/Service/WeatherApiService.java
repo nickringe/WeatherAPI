@@ -19,27 +19,25 @@ public class WeatherApiService {
 	//String varyUrl = "https://forecast.weather.gov/MapClick.php?lat={0}&lon={1}&FcstType=json";
 	
 	public String getAreaDescription(){
-		String url = "https://forecast.weather.gov/MapClick.php?lat=42.3831&lon=-83.1022&FcstType=json";
 		Location response = request.getForObject(url, WeatherResponse.class).getLocation();
 		
 		return response.getAreaDescription();
 	}
 	
-	public List<String> getTimeStartPeriodName() {
-		String url = "https://forecast.weather.gov/MapClick.php?lat=42.3831&lon=-83.1022&FcstType=json";
-		List<String> response = request.getForObject(url, WeatherResponse.class).getTime().getStartPeriodName();
+	public StringBuilder getTimeStartPeriodName() {
+		StringBuilder response = request.getForObject(url, WeatherResponse.class).getTime().getStartPeriodName();
 		
 		return response;
 	}
 	
-	public List<String> getTimeDataText(){
-		List<String> response = request.getForObject(url, WeatherResponse.class).getData().getText();
+	public StringBuilder getTimeDataText(){
+		StringBuilder response = request.getForObject(url, WeatherResponse.class).getData().getText();
 		
 		return response;
+		
 	}
 	
 	public String getCurrentObName() {
-		String url = "https://forecast.weather.gov/MapClick.php?lat=42.3831&lon=-83.1022&FcstType=json";
 		String response = request.getForObject(url, WeatherResponse.class).getCurrentobservation().getName();
 		
 		return response;
